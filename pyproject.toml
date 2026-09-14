@@ -1,0 +1,10 @@
+[project]
+name = "spatialdata-celldega-demo"
+version = "0.1.0"
+description = "Inspect tiled SpatialData and visualize it with a local Celldega server."
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "celldega==0.26.0a1",
+    "ipykernel>=6.29",
+    "jupyterlab>=4.4",
+]
