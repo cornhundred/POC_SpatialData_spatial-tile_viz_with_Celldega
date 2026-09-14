@@ -2,6 +2,12 @@
 
 This repository is a minimal proof of concept for proposed SpatialData storage changes. It loads a tiled SpatialData store, checks its geometry and CSC encodings, and visualizes it directly with Celldega `0.26.0a1` through a local HTTP server. It intentionally does not cover how the modified dataset was produced.
 
+## Demo
+
+
+https://github.com/user-attachments/assets/050be217-f7e6-496d-b11f-ce489be64f69
+
+
 ## Requirements
 
 - macOS or Linux
