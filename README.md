@@ -7,6 +7,8 @@ This repository is a minimal proof of concept for proposed SpatialData storage c
 
 https://github.com/user-attachments/assets/050be217-f7e6-496d-b11f-ce489be64f69
 
+* zooming into tissue renders transcripts and cell boundaries using row-group Parquet spatial tiles
+* clicking genes colors cells by their gene expression counts using the CSC layer
 
 ## Requirements
 
