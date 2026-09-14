@@ -8,7 +8,7 @@ The SpatialData logical model is unchanged: the store still contains standard im
 
 | Area | Current SpatialData convention | Proposed profile demonstrated here |
 | --- | --- | --- |
-| Spatial indexing | Points and shapes are stored in Parquet, but there is no standard mapping from a spatial region to particular files or row groups. | Assign points and shapes to a shared regular grid, store each logical tile in the corresponding Parquet row group, and record the grid-to-file mapping in `spatial_tiling` metadata. |
+| Spatial indexing | Points and shapes are stored in Parquet, but there is no standard mapping from a spatial region to particular files or row groups. | Assign points and shapes to a shared regular grid, store each logical tile in the corresponding Parquet row group, and record the grid-to-file mapping in `spatial_tiling` metadata (zarr.json). |
 | Transcript columns | Point coordinates use standard `x` and `y` columns; no projection-oriented physical column order is prescribed. | Keep the standard point representation while placing commonly projected columns (`x`, `y`, and `feature_name`) first. |
 | Cell geometries | Shapes may use WKB or the already-supported GeoArrow geometry encoding; GeoArrow is not required by default. | Store cell boundaries as native `geoarrow.polygon` columns so Arrow-compatible clients can read them without decoding WKB. |
 | Expression matrix | AnnData permits CSR, CSC, dense matrices, and additional layers, but SpatialData does not prescribe a gene-major representation. | Keep the conventional CSR `X` matrix and add the equivalent CSC matrix as `layers["X_csc"]` for efficient access to individual genes. |
