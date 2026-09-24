@@ -2,6 +2,8 @@
 
 This repository is a minimal proof of concept for proposed SpatialData storage changes. It loads a tiled SpatialData store, checks its geometry and CSC encodings, and visualizes it directly with Celldega `0.26.0a1` through a local HTTP server. It intentionally does not cover how the modified dataset was produced.
 
+see example dataset: https://huggingface.co/datasets/cornhundred/SpatialData_with_spatial_tiles/tree/main
+
 ## Proposed storage changes
 
 The SpatialData logical model is unchanged: the store still contains standard images, points, shapes, and an AnnData table and can be opened with `spatialdata.read_zarr`. The proposal changes or more narrowly specifies parts of their on-disk representation to support efficient visualization.
